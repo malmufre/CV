@@ -1,0 +1,15 @@
+section,in_resume,title,loc,institution,start,end,description_1,description_2,description_3
+education,TRUE,M.S Program Evaluation and Data Analytics,Arizona State University,"Phoenix,AZ",2020,2021,Expected to graduate in December 2021,CGPA:4.0,
+education,TRUE,"B.S., Finance",University of Business and Technology,"Jeddah, KSA",2015,2019,"Related Coursework: Corporate Finance, International Finance, Money & Banking, Intermediate Accounting I & II, Business Law.",Thesis- Chanel store financial feasibility analysis,CGPA: 4.98/5
+Certifications,TRUE,Bloomberg Market Concepts Certification,,NA,2019,2019,8-hour self-paced e-learning course that provides a visual introduction to financial markets and the core functionality of the Bloomberg terminal. ,,NA
+Certifications,TRUE,FVMA,CFI Insttitue,,2020,2020,Financial Modeling and Valuation Course,Expected to obtain certification on December 2020,NA
+industry_positions,TRUE,Part-time English Teacher,Oxford English Academy,"Jeddah, KSA",2016,2017,Check students'work,"Plan , Prepare and deliver lessons",NA
+industry_positions,TRUE,Finance Intern,Chalhoub Group,"Jeddah, KSA",2019,2019,"Assist in analyzing sales, other financial data and  in closing monthly financial statements ",Collaborate with units' management to explain operational variances," Control receivables by Cross checking actual payments made against the invoices submitted, and summarize discrepancies to Senior Financial Analyst."
+industry_positions,TRUE,Part-time learning guide,Jeddah Excel Community,"Jeddah, KSA",2019,2019,Present workshops to participants on excel,Assist participants with their assigned tasks ,
+industry_positions,TRUE,Financial Analyst,Athman Financial Advisory,"Jeddah,KSA",2020,2020,Create financial models to forecast future performance of businesses,Provide business valuations to firms and clients in a range of industries,Attend meetings with clients to understand a company's financial projections and determine risks of investments
+data_science_writings,TRUE,Visualization of a built -in data set using ggplo2 Package,Code-through,NA,2020,2020,Published on Rpubs,NA,NA
+data_science_writings,TRUE,"Dynamic dashboard on accidents in Tempe,AZ",Flex Dashboard,NA,2020,2020,The dashboard described the accidents that happened in the  city of Tempe in relation to many different variables.,NA,NA
+data_science_writings,TRUE,Monty Hall Problem  Package,R Package,N/A,2020,2020,Created my first R package on the monty hall problem,NA,NA
+data_science_writings,TRUE,Beautiful Jekyll Website,Github Website,,2020,2020,Forked my first website and added new content to it ,NA,NA
+References,TRUE,Mazen Yamani,"Managing Partner, Athman Financial Advisory",,,,Contact information available upon request,NA,NA
+References,TRUE,Dr Farah Durani,"Finance Professor, University of Business and Technology",,,,Contact information available upon request,NA,NA
