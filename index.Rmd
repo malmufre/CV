@@ -1,0 +1,224 @@
+---
+title: "Marah Al Mufregh's CV"
+author: Marah Al Mufregh
+date: "`r Sys.Date()`"
+output:
+  pagedown::html_resume:
+    css: ['css/styles.css', 'resume']
+    # set it to true for a self-contained HTML page but it'll take longer to render
+    self_contained: true
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  results='asis', 
+  echo = FALSE
+)
+
+library(glue)
+library(tidyverse)
+
+# Set this to true to have links turned into footnotes at the end of the document
+PDF_EXPORT <- FALSE
+
+# Holds all the links that were inserted for placement at the end
+links <- c()
+
+source('parsing_functions.R')
+
+# Load csv with position info
+position_data <- read_csv('positions.csv')
+```
+
+
+```{r}
+# When in export mode the little dots are unaligned, so fix that. 
+if(PDF_EXPORT){
+  cat("
+  <style>
+  :root{
+    --decorator-outer-offset-left: -6.5px;
+  }
+  </style>")
+}
+```
+
+
+Aside
+================================================================================
+
+
+![logo](beta_dist.png){width=100%}
+
+
+
+Contact {#contact}
+--------------------------------------------------------------------------------
+
+
+- <i class="fa fa-envelope"></i> marahm96@hotmail.com
+
+- <i class="fa fa-github"></i> github.com/malmufre
+
+- <i class="fa fa-phone"></i> (966) 538192453
+
+- <i class="fa fa-linkedin"></i> Marah Al Mufregh
+
+
+Language Skills {#skills}
+--------------------------------------------------------------------------------
+
+```{r}
+skills <- tribble(
+  ~skill,               ~level,
+  "R",                  3.5,
+  "Markdown",           3.5,
+  "C++",                1,
+ " HTML",               1
+)
+
+build_skill_bars(skills)
+
+```
+
+
+
+
+
+Disclaimer {#disclaimer}
+--------------------------------------------------------------------------------
+
+Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+
+The source code is available at [github.com/malmufre/CV](https://github.com/malmufre/CV).
+
+Last updated on `r Sys.Date()`.
+
+
+
+
+Main
+================================================================================
+
+Marah Al Mufregh {#title}
+--------------------------------------------------------------------------------
+
+
+```{r}
+intro_text <- "Performance-driven and detail-oriented individual with a finance degree. Seeking a position related to my field of study to utilize analytical, quantitative skills and communication skills to provide accurate analysis and summarization of data. 
+I have made  feasibility studies & valuations for various businesses in different fields and I  am currently pursuing a Masters in Program Evaluation and Data Analytics from Arizona State University.
+"
+
+cat(sanitize_links(intro_text))
+```
+
+
+
+Education {data-icon=graduation-cap data-concise=true}
+--------------------------------------------------------------------------------
+
+
+
+
+
+```{r}
+print_section(position_data, 'education')
+```
+
+
+
+
+
+
+
+
+
+
+
+
+Certifications {data-icon=laptop}
+--------------------------------------------------------------------------------
+
+```{r}
+print_section(position_data, 'Certifications')
+```
+
+
+
+Industry Experience {data-icon=suitcase}
+--------------------------------------------------------------------------------
+
+
+
+```{r}
+print_section(position_data, 'industry_positions')
+```
+
+
+::: aside
+I have worked in a finance related roles and would love to combine my finance related experience with my knowledge in R in the future.
+I like collaborative environments where I can learn from my peers. 
+:::
+
+
+
+
+<br>
+<br>
+<br>
+
+
+
+Data Science Projects {data-icon=chart-line}
+--------------------------------------------------------------------------------
+
+
+::: aside
+All of the following data science projects were done as part of my graduate coursework. 
+:::
+
+```{r}
+print_section(position_data, 'data_science_writings')
+```
+
+
+
+References{data-icon=users}
+--------------------------------------------------------------------------------
+
+
+
+```{r}
+print_section(position_data, 'References')
+```
+
+
+
+
+
+
+
+
+```{r}
+if(PDF_EXPORT){
+  cat("
+  
+Links {data-icon=link}
+--------------------------------------------------------------------------------
+
+<br>
+
+
+")
+  
+  walk2(links, 1:length(links), function(link, index){
+    print(glue('{index}. {link}'))
+  })
+}
+
+
+
+
+```
+
+
